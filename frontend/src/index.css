@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0B192C;
+    --bg-card: #152C4A;
+    --border-color: #1E3E62;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+  }
+  
+  body {
+    @apply bg-navy-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-teal-500 selection:text-navy-950;
+  }
+}
+
+/* Custom scrollbar for clean dashboard view */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070D17;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E3E62;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2A5485;
+}
+
+/* Glassmorphism utility card */
+.glass-card {
+  background: rgba(21, 44, 74, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 62, 98, 0.8);
+}
+
+.glass-card-hover {
+  transition: all 0.2s ease-in-out;
+}
+.glass-card-hover:hover {
+  border-color: rgba(45, 212, 191, 0.4);
+  box-shadow: 0 4px 20px -2px rgba(13, 148, 136, 0.15);
+  transform: translateY(-1px);
+}
